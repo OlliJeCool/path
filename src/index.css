@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.correct-gradient{
+.correct-gradient {
   box-shadow: 0px 0px 10px 2px rgba(104, 164, 255, 0.65);
+}
+
+.incorrect-gradient {
+  box-shadow: 0px 0px 10px 2px rgba(253, 95, 138, 0.65);
+}
+
+body {
+  background-color: #3A383D;
 }
