@@ -1,8 +1,25 @@
 import { Link, useNavigate } from "react-router-dom"
 import pathQuestions from "../constants"
+import { useEffect } from "react";
 
 const QuestionList = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        var updateTime = localStorage.getItem('updateTime');
+        var updateDate = new Date()
+        updateDate.setTime(updateTime)
+
+        var currentTime = new Date()
+
+        var timeDiffrence = currentTime.getTime() - updateDate.getTime()
+        var hoursDifference = timeDiffrence / (1000 * 60 * 60)
+
+        if(hoursDifference > 12){
+            pathQuestions.forEach(question => localStorage.setItem(question.id, false))
+        }
+
+    })
 
     const handleClick = (id) => {
         navigate(`/${id}`)

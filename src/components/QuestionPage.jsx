@@ -17,11 +17,14 @@ const QuestionPage = ({ question }) => {
         
         if(localStorage.getItem(question.id) !== 'true'){
             setClicked(() => option.answer)
+
+            if (option.correct) {
+                localStorage.setItem(question.id, true)
+                localStorage.setItem('updateTime', Date.now(0))
+            }
         }
 
-        if (option.correct) {
-            localStorage.setItem(question.id, true)
-        }
+        
     }
 
     return (
