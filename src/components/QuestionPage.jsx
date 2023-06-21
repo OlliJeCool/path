@@ -71,7 +71,7 @@ const QuestionPage = ({ question }) => {
                     </div>
                     <section className="w-full bg-primary flex flex-col gap-10 items-center">
                         <div className="max-w-[100%] max-h-[30%] flex justify-center items-center mt-5">
-                            <img className="w-full h-full" src={'one.png'}></img>
+                            <img className="w-full h-full" src={question.pic}></img>
                         </div>
                         <section className="flex flex-col justify-center gap-8 w-[100%]">
                             <h1 className="text-center text-lg">{question.question}</h1>

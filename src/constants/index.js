@@ -1,7 +1,7 @@
 const pathQuestions = [
     {
         id: 1,
-        pic: "one.png",
+        pic: "one.jpg",
         question: "Jakých vlnových délek využíval výpomocný vysílač u Rádiovky?",
         options: [
             {
@@ -24,7 +24,7 @@ const pathQuestions = [
     },
     {
         id: 2,
-        pic: "two.png",
+        pic: "two.jpg",
         question: `V jakém roce vznikl první bezdrátový komunikační přístroj?`,
         options: [
             {
@@ -47,7 +47,7 @@ const pathQuestions = [
     },
     {
         id: 3,
-        pic: "three.png",
+        pic: "three.jpg",
         question: `S jakými městy v roce 1923 navázalo Československo přes vysílač kontakt?`,
         options: [
             {
@@ -70,7 +70,7 @@ const pathQuestions = [
     },
     {
         id: 4,
-        pic: "four.png",
+        pic: "four.jpg",
         question: `Za jakým účelem armáda využívala Rádiovku?`,
         options: [
             {
@@ -93,7 +93,7 @@ const pathQuestions = [
     },
     {
         id: 5,
-        pic: "five.png",
+        pic: "five.jpg",
         question: `V 50. letech byly v okolí radiostanice vybudovány sady. Dnes místo nich stojí například rodinné domy. Jaké sady tam byly vysazeny?`,
         options: [
             {
@@ -116,7 +116,7 @@ const pathQuestions = [
     },
     {
         id: 6,
-        pic: "six.png",
+        pic: "six.jpg",
         question: `Jak se jmenoval první počítač?`,
         options: [
             {
@@ -139,7 +139,7 @@ const pathQuestions = [
     },
     {
         id: 7,
-        pic: "seven.png",
+        pic: "seven.jpg",
         question: `Za jakým účelem se dnes budova bývalé rádiové stanice využívá?`,
         options: [
             {
@@ -162,7 +162,7 @@ const pathQuestions = [
     },
     {
         id: 8,
-        pic: "eight.png",
+        pic: "eight.jpg",
         question: `U jaké křižovatky měla tato hnízda původně být?`,
         options: [
             {
