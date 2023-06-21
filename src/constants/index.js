@@ -25,121 +25,6 @@ const pathQuestions = [
     {
         id: 2,
         pic: "two.png",
-        question: `S jakými městy v roce 1923 navázalo Československo přes vysílač kontakt?`,
-        options: [
-            {
-                answer: "Řím, Paříž, Londýn",
-                correct: false
-            },
-            {
-                answer: "Paříž, Bern, Bukurešť",
-                correct: true
-            },
-            {
-                answer: "Londýn, Paříž, Moskva",
-                correct: false
-            },
-            {
-                answer: "Stockholm, Varšav, Oslo",
-                correct: false
-            },
-        ]
-    },
-    {
-        id: 3,
-        pic: "three.png",
-        question: `Za jakým účelem armáda využívala Rádiovku?`,
-        options: [
-            {
-                answer: "Špionáž",
-                correct: false
-            },
-            {
-                answer: "Šíření komunistické propagandy",
-                correct: false
-            },
-            {
-                answer: "Zabezpečení letového provozu",
-                correct: true
-            },
-            {
-                answer: "Relaxační komplex",
-                correct: false
-            },
-        ]
-    },
-    {
-        id: 4,
-        pic: "four.png",
-        question: `Jak se jmenoval první počítač?`,
-        options: [
-            {
-                answer: "KAK",
-                correct: false
-            },
-            {
-                answer: "ENIAC",
-                correct: true
-            },
-            {
-                answer: "Z2",
-                correct: false
-            },
-            {
-                answer: "MARK",
-                correct: false
-            },
-        ]
-    },
-    {
-        id: 5,
-        pic: "five.png",
-        question: `Jak se dnes budova bývalé rádiové stanice využívá?`,
-        options: [
-            {
-                answer: "Jako mateřská škola",
-                correct: false
-            },
-            {
-                answer: "Jako základní škola",
-                correct: false
-            },
-            {
-                answer: "Jako gymnázium",
-                correct: true
-            },
-            {
-                answer: "Nijak se nevyužívá",
-                correct: false
-            },
-        ]
-    },
-    {
-        id: 5,
-        pic: "five.png",
-        question: `Jak se dnes budova bývalé rádiové stanice využívá?`,
-        options: [
-            {
-                answer: "Jako mateřská škola",
-                correct: false
-            },
-            {
-                answer: "Jako základní škola",
-                correct: false
-            },
-            {
-                answer: "Jako gymnázium",
-                correct: true
-            },
-            {
-                answer: "Nijak se nevyužívá",
-                correct: false
-            },
-        ]
-    },
-    {
-        id: 6,
-        pic: "six.png",
         question: `V jakém roce vznikl první bezdrátový komunikační přístroj?`,
         options: [
             {
@@ -161,8 +46,54 @@ const pathQuestions = [
         ]
     },
     {
-        id: 7,
-        pic: "seven.png",
+        id: 3,
+        pic: "three.png",
+        question: `S jakými městy v roce 1923 navázalo Československo přes vysílač kontakt?`,
+        options: [
+            {
+                answer: "Řím, Paříž, Londýn",
+                correct: false
+            },
+            {
+                answer: "Paříž, Bern, Bukurešť",
+                correct: true
+            },
+            {
+                answer: "Londýn, Paříž, Moskva",
+                correct: false
+            },
+            {
+                answer: "Stockholm, Varšava, Oslo",
+                correct: false
+            },
+        ]
+    },
+    {
+        id: 4,
+        pic: "four.png",
+        question: `Za jakým účelem armáda využívala Rádiovku?`,
+        options: [
+            {
+                answer: "Špionáž",
+                correct: false
+            },
+            {
+                answer: "Šíření komunistické propagandy",
+                correct: false
+            },
+            {
+                answer: "Zabezpečení letového provozu",
+                correct: true
+            },
+            {
+                answer: "Relaxační komplex",
+                correct: false
+            },
+        ]
+    },
+    {
+        id: 5,
+        pic: "five.png",
         question: `V 50. letech byly v okolí radiostanice vybudovány sady. Dnes místo nich stojí například rodinné domy. Jaké sady tam byly vysazeny?`,
         options: [
             {
@@ -170,7 +101,7 @@ const pathQuestions = [
                 correct: false
             },
             {
-                answer: "Melounové a mangové sady",
+                answer: "Melouňové a mangové sady",
                 correct: false
             },
             {
@@ -178,7 +109,53 @@ const pathQuestions = [
                 correct: true
             },
             {
-                answer: "Švestkový a broskvový sad",
+                answer: "Švestkové a broskvové sady",
+                correct: false
+            },
+        ]
+    },
+    {
+        id: 6,
+        pic: "six.png",
+        question: `Jak se jmenoval první počítač?`,
+        options: [
+            {
+                answer: "KAK",
+                correct: false
+            },
+            {
+                answer: "ENIAC",
+                correct: true
+            },
+            {
+                answer: "Z2",
+                correct: false
+            },
+            {
+                answer: "MARK",
+                correct: false
+            },
+        ]
+    },
+    {
+        id: 7,
+        pic: "seven.png",
+        question: `Za jakým účelem se dnes budova bývalé rádiové stanice využívá?`,
+        options: [
+            {
+                answer: "Mateřská škola",
+                correct: false
+            },
+            {
+                answer: "Základní škola",
+                correct: false
+            },
+            {
+                answer: "Gymnázium",
+                correct: true
+            },
+            {
+                answer: "Továrna na čokoládu",
                 correct: false
             },
         ]
@@ -186,7 +163,7 @@ const pathQuestions = [
     {
         id: 8,
         pic: "eight.png",
-        question: `U jaké křižovatky měli tyto hnízda původně být?`,
+        question: `U jaké křižovatky měla tato hnízda původně být?`,
         options: [
             {
                 answer: "Budovatelská a Rovná",
@@ -205,7 +182,7 @@ const pathQuestions = [
                 correct: false
             },
         ]
-    },
+    }
 ]
 
 export default pathQuestions
