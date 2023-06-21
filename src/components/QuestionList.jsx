@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 import pathQuestions from "../constants"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const QuestionList = () => {
     const navigate = useNavigate();
