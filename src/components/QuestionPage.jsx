@@ -33,7 +33,7 @@ const QuestionPage = ({ question }) => {
             <div className="w-[90vw] bg-primary text-white font-manrope p-3">
                 <div className="px-1">
                     <Link to="/">Home</Link>
-                    <div className=' float-right' hidden={question.id === 8}>
+                    <div className=' float-right' hidden={question.id === 8 || !isAnswered}>
                         <Link to={`/${question.id + 1}`}>Další</Link>
                     </div>
                 </div>
