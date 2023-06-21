@@ -8,14 +8,15 @@ const QuestionPage = ({ question }) => {
     const [isAnswered, setIsAnswered] = useState(false)
 
     useEffect(() => {
-        if(localStorage.getItem(question.id) === 'true'){
+        if (localStorage.getItem(question.id) === 'true') {
             setIsAnswered(() => true)
         }
+        else setIsAnswered(() => false)
     })
-    
+
     const handleClick = (option) => {
-        
-        if(localStorage.getItem(question.id) !== 'true'){
+
+        if (localStorage.getItem(question.id) !== 'true') {
             setClicked(() => option.answer)
 
             if (option.correct) {
@@ -24,7 +25,7 @@ const QuestionPage = ({ question }) => {
             }
         }
 
-        
+
     }
 
     return (
