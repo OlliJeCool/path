@@ -76,7 +76,7 @@ const QuestionPage = ({ question }) => {
                         <Link to="/">Home</Link>
                         <ProgressBar />
                         <div>
-                            <Link to={`/${question.id + 1}`}>Další</Link>
+                            <Link to={`/${question.id != 8 ? question.id + 1 : ""}`}>Další</Link>
                         </div>
                     </div>
                     <section className="w-full bg-primary flex flex-col gap-10 items-center">
