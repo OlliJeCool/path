@@ -47,7 +47,7 @@ const QuestionPage = ({ question }) => {
 
     return (
         <div className="flex justify-center w-full text-white">
-            {true ?
+            {showIsDone ?
                 <div className="fixed w-full h-[100vh]  flex justify-center backdrop-blur-md  items-center">
                     <div className='w-[85%]'>
                         <div className='flex justify-end mb-2' onClick={closeShowIsDone}>
