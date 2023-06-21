@@ -22,6 +22,15 @@ const QuestionPage = ({ question }) => {
             if (option.correct) {
                 localStorage.setItem(question.id, true)
                 localStorage.setItem('updateTime', Date.now(0))
+
+                var count = 0
+                for (let i = 1; i <= 8; i++) {
+                    if (localStorage.getItem(i) === 'true') count++
+                }
+                if (count === 8) {
+                    alert("Gratulujeme, odpověděli jste správně na všechny otázky!")
+                }
+
             }
         }
 
