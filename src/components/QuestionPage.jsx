@@ -29,8 +29,8 @@ const QuestionPage = ({ question }) => {
                     if (localStorage.getItem(i) === 'true') count++
                 }
                 if (count === 8) {
+                    setShowIsDone(() => true)
                 }
-                setShowIsDone(() => true)
                 // alert("Gratulujeme, odpověděli jste správně na všechny otázky!")
                 // navigate('/')
 
