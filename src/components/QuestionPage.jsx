@@ -29,8 +29,8 @@ const QuestionPage = ({ question }) => {
                     if (localStorage.getItem(i) === 'true') count++
                 }
                 if (count === 8) {
-                    setShowIsDone(() => true)
                 }
+                setShowIsDone(() => true)
                 // alert("Gratulujeme, odpověděli jste správně na všechny otázky!")
                 // navigate('/')
 
@@ -47,13 +47,13 @@ const QuestionPage = ({ question }) => {
 
     return (
         <div className="flex justify-center w-full text-white">
-            {showIsDone ?
-                <div className="fixed w-full h-[100vh] flex justify-center backdrop-blur-sm">
-                    <div className='place-self-end w-[85%]'>
+            {true ?
+                <div className="fixed w-full h-[100vh]  flex justify-center backdrop-blur-md  items-center">
+                    <div className='w-[85%]'>
                         <div className='flex justify-end mb-2' onClick={closeShowIsDone}>
                             <img src="close.svg" />
                         </div>
-                        <div className="rounded bg-primary mb-[20vh] w-[100%] h-min text-center py-20 px-10 text-lg border-2 border-white ">
+                        <div className="rounded bg-primary w-[100%] h-min text-center py-20 px-10 text-lg border-4 border-[#68ff72a6] ">
                             <div>Gratulujeme!</div>
                             <div>Odpověděli jste správně na všechny otázky.</div>
                         </div>
