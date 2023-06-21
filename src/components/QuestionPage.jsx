@@ -1,12 +1,28 @@
 import { useEffect, useState } from "react";
+import Confetti from "react-dom-confetti";
+import { Toaster, toast } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom"
+import ProgressBar from "./ProgressBar";
 
 const QuestionPage = ({ question }) => {
     const navigate = useNavigate();
 
+    const config = {
+        angle: "90",
+        spread: "120",
+        startVelocity: "32",
+        elementCount: "30",
+        dragFriction: "0.23",
+        duration: "2450",
+        stagger: 3,
+        width: "8px",
+        height: "8px",
+        perspective: "496px",
+        colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
+      };
+
     const [clicked, setClicked] = useState('')
     const [isAnswered, setIsAnswered] = useState(false)
-    const [showIsDone, setShowIsDone] = useState(false)
 
     useEffect(() => {
         if (localStorage.getItem(question.id) === 'true') {
@@ -29,43 +45,37 @@ const QuestionPage = ({ question }) => {
                     if (localStorage.getItem(i) === 'true') count++
                 }
                 if (count === 8) {
-                    setShowIsDone(() => true)
+                    toast.success("Gratulujeme, odpověděli jste správně na všechny otázky!", {style: {
+                        borderRadius: '10px',
+                        background: '#333',
+                        color: '#fff',
+                      }, duration: 5000})
                 }
-                // alert("Gratulujeme, odpověděli jste správně na všechny otázky!")
-                // navigate('/')
-
+            }
+            else{
+                toast.error("Špatná odpověď.", {
+                    style: {
+                        borderRadius: '10px',
+                        background: '#333',
+                        color: '#fff',
+                      },
+                })
             }
         }
 
 
     }
 
-    const closeShowIsDone = () => {
-        setShowIsDone(false)
-        navigate('/')
-    }
-
     return (
         <div className="flex justify-center w-full text-white">
-            {showIsDone ?
-                <div className="fixed w-full h-[100vh]  flex justify-center backdrop-blur-md  items-center">
-                    <div className='w-[85%]'>
-                        <div className='flex justify-end mb-2' onClick={closeShowIsDone}>
-                            <img src="close.svg" />
-                        </div>
-                        <div className="rounded bg-primary w-[100%] h-min text-center py-20 px-10 text-lg border-4 border-[#68ff72a6] ">
-                            <div>Gratulujeme!</div>
-                            <div>Odpověděli jste správně na všechny otázky.</div>
-                        </div>
-                    </div>
-                </div>
-                : ""
-            }
+            <Toaster
+            position="top-center" />
             <div className="py-5">
                 <div className="w-[90vw] bg-primary text-white font-manrope p-3">
-                    <div className="px-1">
+                    <div className="flex justify-evenly items-center">
                         <Link to="/">Home</Link>
-                        <div className=' float-right' hidden={question.id === 8 || !isAnswered}>
+                        <ProgressBar />
+                        <div>
                             <Link to={`/${question.id + 1}`}>Další</Link>
                         </div>
                     </div>
@@ -77,7 +87,8 @@ const QuestionPage = ({ question }) => {
                             <h1 className="text-center text-lg">{question.question}</h1>
                             <div className="flex flex-col gap-8 items-center justify-center">
                                 {question.options.map((option) => (
-                                    <div className={`w-[90%] h-16 bg-secondary rounded-md flex justify-center items-center ${isAnswered && option.correct ? 'correct-gradient' : ''} ${clicked === option.answer ? option.correct ? 'correct-gradient' : 'incorrect-gradient' : ''}`} onClick={() => handleClick(option)}>
+                                    <div className={`w-[90%] h-16 bg-secondary rounded-md flex flex-col justify-center items-center ${isAnswered && option.correct ? 'correct-gradient' : ''} ${clicked === option.answer ? option.correct ? 'correct-gradient' : 'incorrect-gradient' : ''}`} onClick={() => handleClick(option)}>
+                                        <Confetti active={isAnswered} config={config} />
                                         {option.answer}
                                     </div>
                                 ))}
