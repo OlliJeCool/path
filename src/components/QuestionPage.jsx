@@ -49,7 +49,7 @@ const QuestionPage = ({ question }) => {
                         borderRadius: '10px',
                         background: '#333',
                         color: '#fff',
-                      }, duration: 5000})
+                      }, duration: 6000})
                 }
             }
             else{
@@ -59,6 +59,7 @@ const QuestionPage = ({ question }) => {
                         background: '#333',
                         color: '#fff',
                       },
+                      duration: 2000
                 })
             }
         }

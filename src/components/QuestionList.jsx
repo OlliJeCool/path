@@ -28,7 +28,7 @@ const QuestionList = () => {
     return (
         <div className="flex justify-center items-center font-manrope text-white h-[100vh]">
             <div className="w-[85%]">
-                <div className="text-center text-xl mb-10">Satalická rádiovka</div>
+                <div className="text-center text-xl mb-10">Satalická Rádiovka</div>
                 <div className='bg-primary flex flex-col items-center justify-center px-3 mt-5 gap-5'>
                     {pathQuestions.map((question) => (
                         <div className={`flex justify-center items-center bg-secondary rounded-md h-14 w-full text-white ${localStorage.getItem(question.id) === 'true' ? 'correct-gradient' : ''}`} key={question.id} onClick={() => handleClick(question.id)}>
