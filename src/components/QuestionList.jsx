@@ -21,6 +21,14 @@ const QuestionList = () => {
 
     })
 
+    const deleteProgress = () => {
+        for (let i = 1; i <= 8; i++) {
+            localStorage.setItem(i, false)
+            window.location.reload()
+        }
+
+    }
+
     const handleClick = (id) => {
         navigate(`/${id}`)
     }
@@ -35,6 +43,7 @@ const QuestionList = () => {
                             {question.id}
                         </div>
                     ))}
+                    <button onClick={deleteProgress} className="bg-red-900 py-2 px-5 rounded-2xl border-4 border-red-700 text-opacity-80 text-sm border-opacity-50 text-gray-200 bg-opacity-25">Vymazat odpovedi</button>
                 </div>
             </div>
         </div>
