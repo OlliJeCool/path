@@ -8,8 +8,8 @@ function App() {
   return (
       <Routes>
          <Route path='/' element={<QuestionList/>} />
-         {pathQuestions.map((question) => (
-          <Route path={`${question.id}`} element={<QuestionPage question={question}/>} />
+         {pathQuestions.map((question, index) => (
+          <Route key={index} path={`${question.id}`} element={<QuestionPage question={question}/>} />
          ))}
       </Routes>
   )

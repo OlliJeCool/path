@@ -23,16 +23,18 @@ const QuestionPage = ({ question }) => {
 
     const [clicked, setClicked] = useState('')
     const [isAnswered, setIsAnswered] = useState(false)
+    const [confetti, setConfetti] = useState(false)
 
+    
     useEffect(() => {
         if (localStorage.getItem(question.id) === 'true') {
             setIsAnswered(() => true)
         }
         else setIsAnswered(() => false)
+
+        setConfetti(false)
     })
-
     const handleClick = (option) => {
-
         if (localStorage.getItem(question.id) !== 'true') {
             setClicked(() => option.answer)
 
@@ -50,8 +52,9 @@ const QuestionPage = ({ question }) => {
                         borderRadius: '10px',
                         background: '#333',
                         color: '#fff',
-                      }, duration: 6000})
+                      }, duration: 4000})
                 }
+                setConfetti(true)
             }
             else{
                 toast.error("Špatná odpověď.", {
@@ -68,6 +71,7 @@ const QuestionPage = ({ question }) => {
 
     }
 
+    
     return (
         <div className="flex justify-center w-full text-white">
             <Toaster
@@ -88,9 +92,9 @@ const QuestionPage = ({ question }) => {
                         <section className="flex flex-col justify-center gap-8 w-[100%]">
                             <h1 className="text-center text-lg">{question.question}</h1>
                             <div className="flex flex-col gap-8 items-center justify-center">
-                                {question.options.map((option) => (
-                                    <div className={`w-[90%] h-16 bg-secondary rounded-md flex flex-col justify-center items-center ${isAnswered && option.correct ? 'correct-gradient' : ''} ${clicked === option.answer ? option.correct ? 'correct-gradient' : 'incorrect-gradient' : ''}`} onClick={() => handleClick(option)}>
-                                        <Confetti active={isAnswered} config={config} />
+                                {question.options.map((option, index) => (
+                                    <div key={index} className={`w-[90%] h-16 bg-secondary rounded-md flex flex-col justify-center items-center ${isAnswered && option.correct ? 'correct-gradient' : ''} ${clicked === option.answer ? option.correct ? 'correct-gradient' : 'incorrect-gradient' : ''}`} onClick={() => handleClick(option)}>
+                                        <Confetti active={confetti} config={config} />
                                         {option.answer}
                                     </div>
                                 ))}

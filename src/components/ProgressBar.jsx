@@ -5,8 +5,8 @@ const ProgressBar = () => {
   return (
     <div className='flex flex-row gap-2'>
     {
-        lvls.map((item) => (
-            <div className={`w-3 h-4 ${localStorage.getItem(item) === 'true' ? 'bg-[#68ff72a6]' : 'bg-secondary'} rounded-sm`} />
+        lvls.map((item, index) => (
+            <div key={index} className={`w-3 h-4 ${localStorage.getItem(item) === 'true' ? 'bg-[#68ff72a6]' : 'bg-secondary'} rounded-sm`} />
         ))
     }
     </div>
