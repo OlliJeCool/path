@@ -59,7 +59,7 @@ const QuestionPage = ({ question }) => {
                         background: '#333',
                         color: '#fff',
                       },
-                      duration: 1000
+                      duration: 1500
                 })
             }
         }
