@@ -37,6 +37,7 @@ const QuestionPage = ({ question }) => {
             setClicked(() => option.answer)
 
             if (option.correct) {
+                toast.dismiss()
                 localStorage.setItem(question.id, true)
                 localStorage.setItem('updateTime', Date.now(0))
 
@@ -59,7 +60,7 @@ const QuestionPage = ({ question }) => {
                         background: '#333',
                         color: '#fff',
                       },
-                      duration: 1500
+                      duration: 2000
                 })
             }
         }
