@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ProgressBar = () => {
-    const lvls = [1,2,3,4,5,6,7,8];
+  const lvls = [1,2,3,4,5,6,7,8];
   return (
     <div className='flex flex-row gap-2'>
     {
