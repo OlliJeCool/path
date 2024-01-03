@@ -28,7 +28,7 @@ const pathQuestions = [
         question: `V jakém roce vznikl první bezdrátový komunikační přístroj?`,
         options: [
             {
-                answer: "1896",
+                answer: "1898",
                 correct: true
             },
             {
